@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var notesCollectionView: UICollectionView!
@@ -15,9 +16,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createNote(sender:)))
+        self.loadData()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add, target: self,
+            action: #selector(createNote(sender:)))
     }
-
+    
+    let context: NSManagedObjectContext = {
+        let container = NSPersistentContainer(name: "CoreDataNotes")
+    container.loadPersistentStores { _, error in if let error = error {
+        fatalError("Container loading failed")}}
+     return container.viewContext
+     }()
 
     @objc func createNote(sender: UIBarButtonItem) {
         guard let vc = storyboard?.instantiateViewController(
@@ -46,9 +56,31 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let note = notes[indexPath.row]
         
         cell.titleLabel.text = note.title
-        cell.descriptionLabel.text = note.description
+        cell.descriptionLabel.text = note.descriptionText
 
         return cell
     }
+    
+    func saveChanges() {
+        if context.hasChanges {
+            try? context.save()
+        }
+        
+        if let notes: [Note] = try? context.fetch(Note.fetchRequest()) {
+            self.notes = notes
+        } else {
+            self.notes = []
+        }
+     }
+
+     func loadData() {
+        if let notes: [Note] = try? context.fetch(Note.fetchRequest())
+        {
+            self.notes = notes.sorted(
+                by: { $0.creationDate.compare(($1 as AnyObject).creationDate) == .orderedDescending})
+        } else {
+            self.notes = []
+        }
+     }
 }
 

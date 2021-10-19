@@ -11,12 +11,13 @@
 		5D58285A271EF0F60059E51B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D582859271EF0F60059E51B /* SceneDelegate.swift */; };
 		5D58285C271EF0F60059E51B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D58285B271EF0F60059E51B /* ViewController.swift */; };
 		5D58285F271EF0F60059E51B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D58285D271EF0F60059E51B /* Main.storyboard */; };
-		5D582862271EF0F60059E51B /* avmorozova_6PW4.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D582860271EF0F60059E51B /* avmorozova_6PW4.xcdatamodeld */; };
+		5D582862271EF0F60059E51B /* CoreDataNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D582860271EF0F60059E51B /* CoreDataNotes.xcdatamodeld */; };
 		5D582864271EF0F70059E51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D582863271EF0F70059E51B /* Assets.xcassets */; };
 		5D582867271EF0F70059E51B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D582865271EF0F70059E51B /* LaunchScreen.storyboard */; };
 		5D58286F271EFF350059E51B /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D58286E271EFF350059E51B /* NoteCell.swift */; };
 		5D582871271F17010059E51B /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D582870271F17010059E51B /* NoteViewController.swift */; };
-		5D582873271F257E0059E51B /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D582872271F257E0059E51B /* NoteModel.swift */; };
+		5D582876271F54A00059E51B /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D582874271F54A00059E51B /* Note+CoreDataClass.swift */; };
+		5D582877271F54A00059E51B /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D582875271F54A00059E51B /* Note+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		5D582868271EF0F70059E51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D58286E271EFF350059E51B /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		5D582870271F17010059E51B /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
-		5D582872271F257E0059E51B /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		5D582874271F54A00059E51B /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5D582875271F54A00059E51B /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,8 @@
 		5D58284B271EF0F60059E51B = {
 			isa = PBXGroup;
 			children = (
+				5D582874271F54A00059E51B /* Note+CoreDataClass.swift */,
+				5D582875271F54A00059E51B /* Note+CoreDataProperties.swift */,
 				5D582856271EF0F60059E51B /* avmorozova_6PW4 */,
 				5D582855271EF0F60059E51B /* Products */,
 			);
@@ -68,13 +72,12 @@
 				5D582859271EF0F60059E51B /* SceneDelegate.swift */,
 				5D58285B271EF0F60059E51B /* ViewController.swift */,
 				5D58285D271EF0F60059E51B /* Main.storyboard */,
-				5D582872271F257E0059E51B /* NoteModel.swift */,
 				5D582870271F17010059E51B /* NoteViewController.swift */,
 				5D58286E271EFF350059E51B /* NoteCell.swift */,
 				5D582863271EF0F70059E51B /* Assets.xcassets */,
 				5D582865271EF0F70059E51B /* LaunchScreen.storyboard */,
 				5D582868271EF0F70059E51B /* Info.plist */,
-				5D582860271EF0F60059E51B /* avmorozova_6PW4.xcdatamodeld */,
+				5D582860271EF0F60059E51B /* CoreDataNotes.xcdatamodeld */,
 			);
 			path = avmorozova_6PW4;
 			sourceTree = "<group>";
@@ -149,10 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D582862271EF0F60059E51B /* avmorozova_6PW4.xcdatamodeld in Sources */,
+				5D582862271EF0F60059E51B /* CoreDataNotes.xcdatamodeld in Sources */,
+				5D582877271F54A00059E51B /* Note+CoreDataProperties.swift in Sources */,
+				5D582876271F54A00059E51B /* Note+CoreDataClass.swift in Sources */,
 				5D58285C271EF0F60059E51B /* ViewController.swift in Sources */,
 				5D58286F271EFF350059E51B /* NoteCell.swift in Sources */,
-				5D582873271F257E0059E51B /* NoteModel.swift in Sources */,
 				5D582858271EF0F60059E51B /* AppDelegate.swift in Sources */,
 				5D582871271F17010059E51B /* NoteViewController.swift in Sources */,
 				5D58285A271EF0F60059E51B /* SceneDelegate.swift in Sources */,
@@ -357,13 +361,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5D582860271EF0F60059E51B /* avmorozova_6PW4.xcdatamodeld */ = {
+		5D582860271EF0F60059E51B /* CoreDataNotes.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				5D582861271EF0F60059E51B /* avmorozova_6PW4.xcdatamodel */,
 			);
 			currentVersion = 5D582861271EF0F60059E51B /* avmorozova_6PW4.xcdatamodel */;
-			path = avmorozova_6PW4.xcdatamodeld;
+			path = CoreDataNotes.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
