@@ -81,26 +81,39 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dUI-zQ-Oua">
                                             <rect key="frame" x="0.0" y="0.0" width="337" height="140"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nau-VA-6rn">
-                                                    <rect key="frame" x="50" y="31" width="237" height="21"/>
+                                                    <rect key="frame" x="10" y="5.5" width="317" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="eiB-5j-cF3"/>
+                                                        <constraint firstAttribute="height" constant="20" id="v6v-X1-Ltf"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8GE-na-vWt">
-                                                    <rect key="frame" x="-39" y="-317" width="414" height="774"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GE-na-vWt">
+                                                    <rect key="frame" x="10" y="35.5" width="317" height="94.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="ZQB-aR-wMu"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="na2-Ya-yug"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Nau-VA-6rn" firstAttribute="top" secondItem="dUI-zQ-Oua" secondAttribute="top" constant="31" id="6Fg-Gb-BTu"/>
-                                                <constraint firstItem="Nau-VA-6rn" firstAttribute="leading" secondItem="dUI-zQ-Oua" secondAttribute="leading" constant="50" id="j3z-6i-cC6"/>
-                                                <constraint firstAttribute="trailing" secondItem="Nau-VA-6rn" secondAttribute="trailing" constant="50" id="yoF-Tx-rT6"/>
+                                                <constraint firstItem="Nau-VA-6rn" firstAttribute="top" secondItem="dUI-zQ-Oua" secondAttribute="top" constant="5.5" id="Df9-Py-caW"/>
+                                                <constraint firstAttribute="trailing" secondItem="Nau-VA-6rn" secondAttribute="trailing" constant="10" id="Oll-Gg-xV3"/>
+                                                <constraint firstItem="8GE-na-vWt" firstAttribute="leading" secondItem="Nau-VA-6rn" secondAttribute="leading" id="Uut-c1-xsg"/>
+                                                <constraint firstAttribute="bottom" secondItem="8GE-na-vWt" secondAttribute="bottom" constant="10" id="jkj-vZ-rLd"/>
+                                                <constraint firstAttribute="trailing" secondItem="8GE-na-vWt" secondAttribute="trailing" constant="10" id="lfY-ia-7Ld"/>
+                                                <constraint firstItem="8GE-na-vWt" firstAttribute="leading" secondItem="dUI-zQ-Oua" secondAttribute="leading" constant="10" id="nv0-1D-d4x"/>
+                                                <constraint firstItem="Nau-VA-6rn" firstAttribute="leading" secondItem="dUI-zQ-Oua" secondAttribute="leading" constant="10" id="pbG-OM-rko"/>
+                                                <constraint firstItem="8GE-na-vWt" firstAttribute="top" secondItem="Nau-VA-6rn" secondAttribute="bottom" constant="10" id="pjR-eh-Wpu"/>
+                                                <constraint firstItem="8GE-na-vWt" firstAttribute="trailing" secondItem="Nau-VA-6rn" secondAttribute="trailing" id="z8V-Fc-v4l"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -112,7 +125,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="8GE-na-vWt" id="dmg-xL-ce6"/>
-                                            <outlet property="titleLabel" destination="8GE-na-vWt" id="LtH-Fm-YZH"/>
+                                            <outlet property="titleLabel" destination="Nau-VA-6rn" id="2v9-9f-766"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

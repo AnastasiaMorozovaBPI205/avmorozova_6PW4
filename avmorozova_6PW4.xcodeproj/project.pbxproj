@@ -16,6 +16,7 @@
 		5D582867271EF0F70059E51B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D582865271EF0F70059E51B /* LaunchScreen.storyboard */; };
 		5D58286F271EFF350059E51B /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D58286E271EFF350059E51B /* NoteCell.swift */; };
 		5D582871271F17010059E51B /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D582870271F17010059E51B /* NoteViewController.swift */; };
+		5D582873271F257E0059E51B /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D582872271F257E0059E51B /* NoteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5D582868271EF0F70059E51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D58286E271EFF350059E51B /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		5D582870271F17010059E51B /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		5D582872271F257E0059E51B /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				5D582859271EF0F60059E51B /* SceneDelegate.swift */,
 				5D58285B271EF0F60059E51B /* ViewController.swift */,
 				5D58285D271EF0F60059E51B /* Main.storyboard */,
+				5D582872271F257E0059E51B /* NoteModel.swift */,
 				5D582870271F17010059E51B /* NoteViewController.swift */,
 				5D58286E271EFF350059E51B /* NoteCell.swift */,
 				5D582863271EF0F70059E51B /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				5D582862271EF0F60059E51B /* avmorozova_6PW4.xcdatamodeld in Sources */,
 				5D58285C271EF0F60059E51B /* ViewController.swift in Sources */,
 				5D58286F271EFF350059E51B /* NoteCell.swift in Sources */,
+				5D582873271F257E0059E51B /* NoteModel.swift in Sources */,
 				5D582858271EF0F60059E51B /* AppDelegate.swift in Sources */,
 				5D582871271F17010059E51B /* NoteViewController.swift in Sources */,
 				5D58285A271EF0F60059E51B /* SceneDelegate.swift in Sources */,
