@@ -30,9 +30,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(createNote(sender:)))
     }
 
 
+    @objc func createNote(sender: UIBarButtonItem) {
+        guard let vc = storyboard?.instantiateViewController(
+            withIdentifier: "NoteViewController") else { return }
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
